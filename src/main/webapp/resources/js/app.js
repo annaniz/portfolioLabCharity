@@ -164,6 +164,42 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
+      //quantity
+      const quantity = document.querySelector('#quantity');
+      const quantityVal = document.querySelector('#quantityVal');
+      quantityVal.innerText = quantity.value;
+      //institution
+      const institution = document.querySelector('#institution');
+      const institutionVal = document.querySelector('#institutionVal');
+      institutionVal.innerText = institution.value;
+      //street
+      const street = document.querySelector('#street');
+      const streetVal = document.querySelector('#streetVal');
+      streetVal.innerText = street.value;
+      //city
+      const city = document.querySelector('#city');
+      const cityVal = document.querySelector('#cityVal');
+      cityVal.innerText = city.value;
+      //zipCode
+      const zipCode = document.querySelector('#zipCode');
+      const zipCodeVal = document.querySelector('#zipCodeVal');
+      zipCodeVal.innerText = zipCode.value;
+      //phone
+      const phone = document.querySelector('#phone');
+      const phoneVal = document.querySelector('#phoneVal');
+      phoneVal.innerText = phone.value;
+      //pickUpDate
+      const pickUpDate = document.querySelector('#pickUpDate');
+      const pickUpDateVal = document.querySelector('#pickUpDateVal');
+      pickUpDateVal.innerText = pickUpDate.value;
+      //pickUpTime
+      const pickUpTime = document.querySelector('#pickUpTime');
+      const pickUpTimeVal = document.querySelector('#pickUpTimeVal');
+      pickUpTimeVal.innerText = pickUpTime.value;
+      //pickUpComment
+      const pickUpComment = document.querySelector('#pickUpComment');
+      const pickUpCommentVal = document.querySelector('#pickUpCommentVal');
+      pickUpCommentVal.innerText = pickUpComment.value;
     }
 
   }
