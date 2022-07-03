@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
       //institution
       const institution = document.querySelector('#institution');
       const institutionVal = document.querySelector('#institutionVal');
-      institutionVal.innerText = institution.value;
+      institutionVal.innerText = institution.innerHTML;
       //street
       const street = document.querySelector('#street');
       const streetVal = document.querySelector('#streetVal');
