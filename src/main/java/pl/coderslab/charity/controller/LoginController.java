@@ -18,10 +18,14 @@ public class LoginController {
         return "login";
     }
 
-    @ResponseBody
+
     @PostMapping("/login")
-    public String LoginIn(@RequestParam String username){
-        userService.findByUsername(username);
+    public String LoginIn(){
         return "redirect:/";
+    }
+
+    @GetMapping("/logout")
+    public String logout() {
+        return "redirect:/login";
     }
 }
