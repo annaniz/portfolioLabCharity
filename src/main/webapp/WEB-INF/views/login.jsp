@@ -18,7 +18,7 @@
 
 <section class="login-page">
     <h2>Zaloguj się</h2>
-    <form action="/" method="post">
+    <form:form action="/login" method="post">
         <div class="form-group">
             <input type="text" name="username" placeholder="Username" />
         </div>
@@ -31,8 +31,8 @@
             <a href="register" class="btn btn--without-border">Załóż konto</a>
             <button class="btn" type="submit">Zaloguj się</button>
         </div>
-<%--        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>--%>
-    </form>
+        <%--        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>--%>
+    </form:form>
 </section>
 <%@include file="footer.jsp"%>
 <script src="<c:url value="resources/js/app.js"/>"></script>

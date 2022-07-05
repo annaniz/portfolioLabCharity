@@ -26,9 +26,6 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) {
         User user = userService.findByUsername(username);
         if (user ==null) {throw new UsernameNotFoundException("User not found"); }
-        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-        user.getRoles().forEach(r ->
-                grantedAuthorities.add(new SimpleGrantedAuthority(r.getName())));
         return new CustomUserDetails(user);
     }
 }
