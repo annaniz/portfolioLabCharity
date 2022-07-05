@@ -1,16 +1,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <header>
     <nav class="container container--70">
         <ul class="nav--actions">
-            <li>
-                <div
-                <sec:authorize access="isAuthenticated()">
+            <sec:authorize access="isAuthenticated()">
+                <li class="logged-user">
                     <p>Zalogowany jako: <sec:authentication property="principal.username"/></p>
                     <p>Posiada role: <sec:authentication property="authorities"/></p>
-                </sec:authorize>
-                </div>
-            </li>
+                    <ul class="dropdown">
+                        <li><a href="#">Profil</a></li>
+                        <li><a href="#">Moje zbiórki</a></li>
+                        <li><a href="/logout">Wyloguj</a></li>
+                    </ul>
+                </li>
+            </sec:authorize>
             <li><a href="login" class="btn btn--small btn--without-border">Zaloguj</a></li>
             <li><a href="register" class="btn btn--small btn--highlighted">Załóż konto</a></li>
         </ul>
