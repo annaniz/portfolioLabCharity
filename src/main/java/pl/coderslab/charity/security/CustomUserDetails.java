@@ -53,4 +53,8 @@ public class CustomUserDetails implements UserDetails {
     public boolean isEnabled() {
         return user.isEnabled();
     }
+
+    public boolean hasRole(String roleName){
+        return this.user.hasRole(roleName);
+    }
 }

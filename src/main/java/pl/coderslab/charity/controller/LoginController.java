@@ -18,9 +18,11 @@ public class LoginController {
         return "login";
     }
 
-
     @PostMapping("/login")
-    public String LoginIn(){
+    public String LoginIn(@RequestParam("username") String username){
+        if (userService.findByUsername(username).hasRole("ADMIN")) {
+            return "redirect:/admin";
+        }
         return "redirect:/";
     }
 
@@ -28,4 +30,10 @@ public class LoginController {
     public String logout() {
         return "redirect:/login";
     }
+
+    @GetMapping("/admin")
+    public String admin(){
+        return "admin";
+    }
+
 }
