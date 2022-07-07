@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.zip.ZipEntry;
 
@@ -30,5 +31,16 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
+    public boolean hasRole(String roleName){
+        Iterator<Role> iterator = roles.iterator();
+
+        while(iterator.hasNext()){
+            Role role = iterator.next();
+            if (role.getName().equals(roleName)){
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
