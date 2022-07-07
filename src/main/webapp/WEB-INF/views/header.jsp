@@ -16,6 +16,7 @@
                 </li>
             </sec:authorize>
             <li><a href="login" class="btn btn--small btn--without-border">Zaloguj</a></li>
+            <li><a href="admin" class="btn btn--small btn--without-border">Admin</a></li>
             <li><a href="register" class="btn btn--small btn--highlighted">Załóż konto</a></li>
         </ul>
 
